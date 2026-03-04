@@ -54,7 +54,23 @@ public class MyDeque<E> implements Deque<E> {
     }
 
     public static void main(String[] args) { 
+        Deque<Integer> test = new MyDeque<Integer>();
 
-        // ...
+        test.enqueueFront(1);
+        test.enqueueFront(2);
+        test.enqueueFront(3);
+
+        System.out.println("size: " + test.size());
+        test.forEach(System.out::println);
+
+        test.enqueueBack(4);
+        test.enqueueBack(5);
+        test.enqueueBack(6);
+
+        System.out.println("size: " + test.size());
+        test.forEach(System.out::println);
+
+        System.out.println("front: " + test.dequeueFront());
+        System.out.println("back: " + test.dequeueBack());
     }
 }
