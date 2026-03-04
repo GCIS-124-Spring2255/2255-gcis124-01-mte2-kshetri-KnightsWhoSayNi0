@@ -4,16 +4,24 @@
 
 package mte2.shapes;
 
-public class Rectangle {
-// public class Rectangle implements Shape {
+public class Rectangle implements Shape {
     
-    // private final double length;
-    // private final double width;
+    private final double length;
+    private final double width;
 
-    // public Rectangle(double length,double width) {  this.length = length;  this.width = width;  }
+    public Rectangle(double length,double width) {
+        this.length = length;  this.width = width;
+    }
 
-    // @Override
-    // @Override
+    @Override
+    public double perimeter() {
+        return 2*length + 2*width;
+    }
+
+    @Override
+    public double area() {
+        return length*width;
+    }
     
     public static void main(String[] args) {
         
